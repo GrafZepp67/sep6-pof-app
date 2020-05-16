@@ -1,1 +1,23 @@
-<p>section-students works!</p>
+<div class="section-container">
+    <h2>Students</h2>
+    <table class="table table-inverse table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Initials</th>
+                <th>Age</th>
+                <th>Study start</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{ student.id }}</td>
+                <td>{{ student.initials }}</td>
+                <td>{{ student.age }}</td>
+                <td>{{ student.studyStart | date: 'short'}}</td>
+                <td>{{ student.country }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
