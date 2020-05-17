@@ -9,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SectionStudentsComponent } from './sections/section-students/section-students.component';
 import { SectionTeachersComponent } from './sections/section-teachers/section-teachers.component';
 import { appRoutes } from 'src/routes';
+import { StudentDataService } from './services/student-data.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { appRoutes } from 'src/routes';
     RouterModule.forRoot(appRoutes),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    StudentDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
